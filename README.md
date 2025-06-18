@@ -1,16 +1,51 @@
-# commande_flutter
+# 🛍️ Application de Commande Flutter
 
-A new Flutter project.
+Application mobile de commande en ligne développée dans le cadre de l'exercice technique proposé par **IZYDESK**.
 
-## Getting Started
+> Réalisée avec Flutter et Provider, cette application consomme une API REST publique, permet d’ajouter des produits au panier, de les modifier, et de simuler la validation d’une commande.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 👨‍💻 Réalisée par
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Mohamed Ayman EL MESKINE**  
+📍 Casablanca, Maroc  
+📧 elmeskine.ayman@gmail.com  
+## 📱 Fonctionnalités
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- ✅ Consommation de l’API `https://dummyjson.com/products`
+- 🛒 Ajout d’articles au panier
+- ✏️ Gestion de la quantité & suppression
+- 💰 Calcul du prix total en temps réel
+- 📤 Envoi de la commande (POST vers `jsonplaceholder`)
+- 🎨 Interface propre & responsive
+- ⚙️ Architecture MVVM + Provider
+
+## 📁 Structure du projet
+
+lib/
+├── models/ → Product, CartItem
+├── services/ → ApiService (GET, POST)
+├── viewmodels/ → ProductViewModel, CartViewModel
+├── views/ → HomePage, CartPage, CheckoutPage
+├── widgets/ → ProductCard, CartItemWidget
+└── main.dart → Initialisation + navigation
+
+##🚀 Lancer le projet localement
+
+git clone https://github.com/aymanel01/commande_flutter.git
+cd commande_flutter
+flutter pub get
+flutter run
+
+##⚙️ Packages utilisés
+
+http	Consommation de l'API REST
+provider	Gestion d'état simple et efficace
+
+##🧠 Architecture & choix techniques
+Architecture MVVM pour une meilleure séparation UI / logique / données
+
+Provider pour une gestion d'état claire (produits et panier)
+
+Code modulaire : chaque composant a son propre fichier
